@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/_100sdp">
+                <ImageView
+                    android:layout_width="@dimen/_200sdp"
+                    android:layout_height="@dimen/_160sdp"
+                    android:src="@drawable/logo"/>
+            </RelativeLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Stationary Store with Completly new"
+                    android:fontFamily="@font/poppinsbold_700"
+                    android:textSize="@dimen/_15sdp"
+                    android:textColor="#4c4948"
+                    android:gravity="center"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="set of items for office,school and"
+                    android:fontFamily="@font/poppinsbold_700"
+                    android:textSize="@dimen/_15sdp"
+                    android:textColor="#4c4948"
+                    android:gravity="center"
+                    android:layout_marginTop="-10dp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="collages"
+                    android:fontFamily="@font/poppinsbold_700"
+                    android:textSize="@dimen/_15sdp"
+                    android:textColor="#4c4948"
+                    android:gravity="center"
+                    android:layout_marginTop="-10dp"/>
+            </LinearLayout>
+            <RelativeLayout
+                android:id="@+id/laybtnstarted"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_55sdp"
+                android:background="@drawable/ract_button"
+                android:layout_marginTop="@dimen/_90sdp"
+                android:layout_marginLeft="@dimen/_30sdp"
+                android:layout_marginRight="@dimen/_30sdp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="GET STARTED"
+                    android:textFontWeight="600"
+                    android:fontFamily="@font/poppinsregular_400"
+                    android:textSize="@dimen/_17sdp"
+                    android:textColor="#4c4948"
+                    android:gravity="center"
+                    android:layout_centerVertical="true"/>
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

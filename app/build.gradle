@@ -1,0 +1,166 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    compileSdkVersion 29
+    //buildToolsVersion "30.0.2"
+
+    defaultConfig {
+        applicationId "com.municipalreport"
+        minSdkVersion 19
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+        lintOptions {
+            checkReleaseBuilds false
+            abortOnError false
+        }
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    allprojects {
+        repositories {
+            jcenter()
+            maven {
+                url "https://maven.google.com"
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    dataBinding {
+        enabled = true
+    }
+    compileOptions {
+        targetCompatibility = '1.8'
+        sourceCompatibility = '1.8'
+    }
+}
+
+dependencies {
+    implementation 'com.github.DantSu:ESCPOS-ThermalPrinter-Android:2.0.8'
+
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.viewpager:viewpager:1.0.0'
+    //noinspection GradleCompatible
+    compile 'org.jtwig:jtwig-core:5.87.0.RELEASE'
+    implementation "com.google.android.material:material:material_design_version"
+    //implementation 'com.google.android.material:material:1.1.0'
+    implementation 'com.github.PhilJay:MPAndroidChart:v2.2.4'
+    // implementation 'com.github.PhilJay:MPAndroidChart:v3.0.2'
+    //implementation 'com.github.PhilJay:MPAndroidChart:v2.2.3'
+    implementation 'com.github.lecho:hellocharts-library:1.5.8@aar'
+    implementation 'com.github.alexfu:CountDownView:0.1.0'
+
+//.................................new.........................................
+   /* implementation 'androidx.appcompat:appcompat:1.1.0-beta01'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.0-beta1'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    implementation 'com.github.bumptech.glide:glide:4.7.1'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.7.1'
+    implementation 'com.squareup.retrofit2:retrofit:2.5.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.1.0'
+    implementation 'androidx.cardview:cardview:1.0.0'*/
+    //....................................................................................
+
+    // implementation 'com.github.PhilJay:MPAndroidChart:v3.0.0-beta1:'
+    // implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+    //implementation 'com.github.PhilJay:MPAndroidChart:v2.2.4'
+    // retrofit, gson
+    implementation 'com.google.code.gson:gson:2.6.2'
+    implementation 'com.squareup.retrofit2:retrofit:2.0.2'
+    implementation 'com.squareup.retrofit2:converter-gson:2.0.2'
+    implementation 'com.squareup.okhttp3:okhttp:3.2.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.6.0'
+
+/*    implementation 'com.google.firebase:firebase-analytics:17.2.2'
+    implementation 'com.google.firebase:firebase-messaging:20.2.0'*/
+    compile 'org.jsoup:jsoup:1.13.1'
+    compile 'com.github.javiersantos:AppUpdater:2.6.4'
+    //noinspection GradleCompatible
+    compile 'com.android.support:design:28.0.0'
+    implementation "androidx.viewpager2:viewpager2:1.0.0"
+    //implementation 'com.google.android.material:material:1.2.1'
+
+    implementation 'androidx.appcompat:appcompat:1.0.0'
+    //noinspection GradleCompatible
+    implementation 'androidx.recyclerview:recyclerview:1.0.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    // implementation 'com.google.android.material:material:1.0.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'com.google.android.gms:play-services-auth:16.0.0'
+
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.multidex:multidex:2.0.0'
+/*    implementation 'com.google.android.gms:play-services-maps:9.2.1'
+    implementation 'com.google.android.gms:play-services:9.2.1'
+    */ implementation 'com.google.code.gson:gson:2.2'
+    implementation 'com.google.android.gms:play-services-vision:16.2.0'
+    implementation 'com.google.android.gms:play-services-location:16.0.0'
+    implementation 'com.squareup.picasso:picasso:2.71828'
+
+    implementation 'com.squareup.retrofit2:retrofit:2.0.2'
+    implementation 'com.squareup.retrofit2:converter-gson:2.0.2'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.4.1'
+    implementation 'com.squareup.okhttp3:okhttp:3.4.1'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.2.0'
+    implementation 'com.squareup.okhttp3:okhttp-urlconnection:3.4.1'
+    implementation 'com.jakewharton.picasso:picasso2-okhttp3-downloader:1.1.0'
+    implementation 'com.github.barteksc:android-pdf-viewer:2.8.2'
+    // Database
+    implementation 'androidx.room:room-runtime:2.0.0'
+    compile 'com.google.android.gms:play-services-base:10.2.0'
+/*
+    implementation 'com.google.firebase:firebase-messaging:17.3.4'
+*/
+
+/*
+    implementation 'com.google.firebase:firebase-core:16.0.1'
+*/
+/*
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0-alpha'
+*/
+
+    compile 'com.matthew-tamlin:sliding-intro-screen:3.2.0'
+    annotationProcessor 'androidx.room:room-compiler:2.0.0'
+    implementation 'androidx.lifecycle:lifecycle-livedata:2.0.0'
+    annotationProcessor 'androidx.lifecycle:lifecycle-compiler:2.0.0'
+    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.0'
+/*
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.0.3'
+*/
+    implementation 'com.github.chrisbanes:PhotoView:2.0.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0'
+    implementation 'com.android.volley:volley:1.1.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.8.0'
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+    implementation 'com.google.android.material:material:1.3.0-alpha02'
+    implementation 'com.daimajia.easing:library:1.0.0@aar'
+    implementation 'com.daimajia.androidanimations:library:1.1.2@aar'
+    implementation 'com.nineoldandroids:library:2.4.0'
+    implementation 'jp.wasabeef:recyclerview-animators:1.0.3@aar'
+    // implementation 'com.android.support:support-v4:20.+'
+    implementation "com.daimajia.swipelayout:library:1.2.0@aar"
+    implementation 'com.github.zzz40500:AndroidSweetSheet:1.1.0'
+    implementation 'com.github.kanytu:android-parallax-recyclerview:v1.7'
+    //implementation 'com.shiburagi.drawerbehavior:drawerbehavior:1.0.13'
+    //implementation 'com.infideap.drawerbehavior:drawer-behavior:0.0.2'
+    implementation 'com.infideap.drawerbehavior:drawer-behavior:0.0.7'
+    implementation 'nl.psdcompany:duo-navigation-drawer:3.0.0'
+    implementation 'com.github.moondroid.coverflow:library:1.0'
+    //implementation 'com.mig35:carousellayoutmanager:version'
+    implementation 'com.google.android.gms:play-services-maps:10.0.0'
+    implementation 'com.google.android.gms:play-services-location:15.0.0'
+
+}

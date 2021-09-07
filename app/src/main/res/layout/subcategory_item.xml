@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.cardview.widget.CardView
+        android:id="@+id/laydiscount"
+        android:layout_width="@dimen/_120sdp"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="#fbfafa"
+        app:cardCornerRadius="@dimen/_20sdp"
+        android:layout_margin="@dimen/_5sdp">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_5sdp">
+                    <ImageView
+                        android:id="@+id/ivproduct"
+                        android:layout_width="@dimen/_40sdp"
+                        android:layout_height="@dimen/_80sdp"
+                        android:background="@drawable/uniballpen"
+                        android:layout_marginLeft="@dimen/_20sdp"
+                        android:layout_marginRight="@dimen/_10sdp"/>
+                </RelativeLayout>
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/layfotter"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_45sdp"
+                android:background="@drawable/subcatbottom_grey">
+                <TextView
+                    android:id="@+id/tvproductname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textFontWeight="600"
+                    android:fontFamily="@font/poppinsregular_400"
+                    android:gravity="center"
+                    android:text="Pilot Pen"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12sdp" />
+            </RelativeLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>
